@@ -69,10 +69,10 @@ public class ProductEntity {
 	@Column
 	private String description;
 
-	@Column(name = "create_date")
+	@Column(name = "create_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP" )
 	private LocalDate createDate;
 
-	@Column(name = "create_by")
+	@Column(name = "create_by", columnDefinition = "varchar(255) default 'admin'")
 	private String createBy;
 
 	@Column
