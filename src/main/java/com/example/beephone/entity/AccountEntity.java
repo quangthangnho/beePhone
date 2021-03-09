@@ -27,16 +27,17 @@ public class AccountEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "username")
+	@Column(name = "username", unique = true)
 	private String userame;
 
 	@Column(name = "password")
 	private String password;
+	
 
 	@Column(name = "fullname")
 	private String fullname;
 
-	@Column(name = "email")
+	@Column(name = "email", unique = true)
 	private String email;
 
 	@Column(name = "image")
